@@ -19,6 +19,7 @@ import { useTranslator } from "@/hooks/useTranslator";
 import { useAppStore } from "@/store";
 import { convertToUsdt } from "@/utils/convertToUsdt";
 import { formatNumber } from "@/utils/formatNumber";
+import { sanitizeAmount } from "@/utils/sanitizeAmount";
 
 import {
   CalcCard,
@@ -83,11 +84,10 @@ export const Calculator = ({ feePercentage }: CalculatorProps) => {
         <FieldRow>
           <AmountInput
             value={amount}
-            onChange={(e) => setAmount(e.target.value)}
-            type="number"
+            onChange={(e) => setAmount(sanitizeAmount(e.target.value))}
             inputProps={{
-              min: 0,
               inputMode: "decimal",
+              autoComplete: "off",
               "aria-label": translate("calculatorYouPay"),
             }}
           />

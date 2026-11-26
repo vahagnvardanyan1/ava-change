@@ -39,24 +39,28 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "var(--font-roboto)",
+    fontFamily: "var(--font-roboto), var(--font-armenian), sans-serif",
     h1: {
-      fontFamily: "var(--font-display), var(--font-roboto), sans-serif",
+      fontFamily:
+        "var(--font-display), var(--font-roboto), var(--font-armenian), sans-serif",
       fontWeight: 700,
       letterSpacing: "-0.04em",
     },
     h2: {
-      fontFamily: "var(--font-display), var(--font-roboto), sans-serif",
+      fontFamily:
+        "var(--font-display), var(--font-roboto), var(--font-armenian), sans-serif",
       fontWeight: 700,
       letterSpacing: "-0.03em",
     },
     h3: {
-      fontFamily: "var(--font-display), var(--font-roboto), sans-serif",
+      fontFamily:
+        "var(--font-display), var(--font-roboto), var(--font-armenian), sans-serif",
       fontWeight: 700,
       letterSpacing: "-0.02em",
     },
     h4: {
-      fontFamily: "var(--font-display), var(--font-roboto), sans-serif",
+      fontFamily:
+        "var(--font-display), var(--font-roboto), var(--font-armenian), sans-serif",
       fontWeight: 600,
       letterSpacing: "-0.02em",
     },

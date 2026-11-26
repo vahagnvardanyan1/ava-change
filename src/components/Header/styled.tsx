@@ -102,7 +102,10 @@ export const HeaderLocale = styled(Box)(({ theme }) => ({
   },
 }));
 
+// 44px is the minimum comfortable tap target on touch screens.
 export const ThemeToggleButton = styled(MuiIconButton)({
+  width: 44,
+  height: 44,
   color: "var(--mui-palette-text-secondary)",
   "&:hover": {
     color: "var(--mui-palette-text-primary)",
@@ -111,6 +114,8 @@ export const ThemeToggleButton = styled(MuiIconButton)({
 
 export const MenuButton = styled(MuiIconButton)(({ theme }) => ({
   display: "inline-flex",
+  width: 44,
+  height: 44,
   [theme.breakpoints.up("md")]: {
     display: "none",
   },

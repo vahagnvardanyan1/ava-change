@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { Roboto, Space_Grotesk } from "next/font/google";
+import { Noto_Sans_Armenian, Roboto, Space_Grotesk } from "next/font/google";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
@@ -15,6 +15,13 @@ const roboto = Roboto({
   weight: ["300", "400", "500", "700"],
   subsets: ["latin", "cyrillic"],
   variable: "--font-roboto",
+  display: "swap",
+});
+
+// Roboto and Space Grotesk have no Armenian glyphs; this fills them in with a matching sans.
+const notoSansArmenian = Noto_Sans_Armenian({
+  subsets: ["armenian"],
+  variable: "--font-armenian",
   display: "swap",
 });
 
@@ -71,7 +78,9 @@ const LocaleLayout = async ({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${roboto.variable} ${spaceGrotesk.variable}`}>
+      <body
+        className={`${roboto.variable} ${spaceGrotesk.variable} ${notoSansArmenian.variable}`}
+      >
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
             <Header />

@@ -38,7 +38,8 @@ export const CardHeader = styled(Box)(({ theme }) => ({
 }));
 
 export const CalcTitle = styled(Typography)({
-  fontFamily: "var(--font-display), var(--font-roboto), sans-serif",
+  fontFamily:
+    "var(--font-display), var(--font-roboto), var(--font-armenian), sans-serif",
   fontWeight: 600,
 });
 
@@ -77,7 +78,8 @@ export const FieldRow = styled(Box)(({ theme }) => ({
 }));
 
 const amountText = {
-  fontFamily: "var(--font-display), var(--font-roboto), sans-serif",
+  fontFamily:
+    "var(--font-display), var(--font-roboto), var(--font-armenian), sans-serif",
   fontSize: "1.9rem",
   fontWeight: 600,
   fontVariantNumeric: "tabular-nums",
@@ -90,11 +92,6 @@ export const AmountInput = styled(InputBase)({
   ...amountText,
   "& input": {
     padding: 0,
-    MozAppearance: "textfield",
-  },
-  "& input::-webkit-outer-spin-button, & input::-webkit-inner-spin-button": {
-    WebkitAppearance: "none",
-    margin: 0,
   },
 });
 

@@ -20,6 +20,19 @@ export const WhySubtitle = styled(Typography)(({ theme }) => ({
   lineHeight: 1.6,
 }));
 
+// Equal-height rows ("1fr") so every card matches the tallest one, not just its row.
+export const FeatureGridRoot = styled(Box)(({ theme }) => ({
+  display: "grid",
+  gap: theme.spacing(3),
+  gridAutoRows: "1fr",
+  [theme.breakpoints.up("sm")]: {
+    gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+  },
+  [theme.breakpoints.up("md")]: {
+    gridTemplateColumns: "repeat(3, minmax(0, 1fr))",
+  },
+}));
+
 export const FeatureCard = styled(Card)(({ theme }) => ({
   padding: theme.spacing(4),
   height: "100%",
@@ -98,6 +111,7 @@ export const FeatureDesc = styled(Typography)({
 export const AnimatedGridItem = styled(Box, {
   shouldForwardProp: (prop) => prop !== "visible" && prop !== "index",
 })<{ visible: boolean; index: number }>(({ visible, index }) => ({
+  height: "100%",
   opacity: visible ? 1 : 0,
   transform: visible ? "translateY(0)" : "translateY(32px)",
   transition: `opacity 0.6s cubic-bezier(0.4,0,0.2,1) ${index * 0.1}s, transform 0.6s cubic-bezier(0.4,0,0.2,1) ${index * 0.1}s`,

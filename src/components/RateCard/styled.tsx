@@ -27,7 +27,8 @@ export const CardLabel = styled(Typography)({
 });
 
 export const CardValue = styled(Typography)({
-  fontFamily: "var(--font-display), var(--font-roboto), sans-serif",
+  fontFamily:
+    "var(--font-display), var(--font-roboto), var(--font-armenian), sans-serif",
   fontWeight: 600,
   fontSize: "1.5rem",
   color: "var(--mui-palette-text-primary)",
