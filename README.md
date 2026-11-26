@@ -35,7 +35,7 @@ The calculator fee is edited in Sanity Studio, embedded at [`/studio`](http://lo
 2. In the project's API settings, add `http://localhost:3000` (and the production URL) as CORS origins with credentials.
 3. Open `/studio` → **Site settings** → set **Exchange fee (%)** → Publish.
 
-The fee is read through Sanity's CDN on every page load, so a published change shows within a few seconds. Until the settings document is published, the home page errors with a message saying so.
+The fee is read from Sanity's live API (not the CDN) on every page load, so a published change shows on the next reload. Until the settings document is published, the home page errors with a message saying so.
 
 ## Commands
 
